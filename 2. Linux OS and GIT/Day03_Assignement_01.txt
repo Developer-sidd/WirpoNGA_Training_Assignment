@@ -1,0 +1,42 @@
+ bash script that uses grep, sed, and awk to list all login attempts, extract attempted user and error messages, and save them to a separate file:
+
+```bash
+#!/bin/bash
+
+# Define log file path (modify if needed)
+LOG_FILE="/var/log/auth.log"
+
+# Define output file path
+OUTPUT_FILE="login_attempts.log"
+
+# Grep for lines containing "Failed password" or "Invalid user"
+grep -E 'Failed password for|Invalid user' $LOG_FILE | \
+  # Use awk to extract user and error message
+  awk '{print $10, $11, $12}' | \
+  # Use sed to format output and remove unnecessary characters
+  sed 's/[]()//g' | \
+  # Redirect output to a separate file
+  > $OUTPUT_FILE
+
+# Print confirmation message
+echo "Login attempts extracted to: $OUTPUT_FILE"
+```
+
+**Explanation:**
+
+1. **Shebang Line (first line):** `#!/bin/bash` specifies the interpreter for this script, which is bash.
+2. **Log File Path:** The script defines the path to the log file containing login attempts. You might need to modify this depending on your system configuration (usually `/var/log/auth.log`).
+3. **Output File Path:**  The script defines the filename for the output file where extracted information will be saved (`login_attempts.log`).
+4. **Grep for Login Attempts:**  The `grep` command searches the log file for lines containing either "Failed password for" or "Invalid user" using the `-E` flag for extended regular expressions.
+5. **Extract User and Message (awk):**  The output of the `grep` command is piped to `awk`. Here, `awk` extracts the 10th, 11th, and 12th columns from each line, which typically contain the attempted user, followed by error messages.
+6. **Format Output (sed):**  The output from `awk` is piped to `sed`. Here, `sed` removes any square brackets (`[]`), parentheses (`()`) using the `s` flag for substitution. These characters might be present depending on the log format and can clutter the output.
+7. **Redirect Output:**  The formatted output from `sed` is redirected using the `>` operator to the `OUTPUT_FILE`.
+8. **Confirmation Message:**  The script prints a message confirming the filename where the extracted login attempts are saved.
+
+**How to Use:**
+
+1. Save the script as a file, for example, `extract_login_attempts.sh`.
+2. Make the script executable: `chmod +x extract_login_attempts.sh`
+3. Run the script: `./extract_login_attempts.sh`
+
+This script will extract attempted usernames and error messages from the system log and save them to the `login_attempts.log` file. 
