@@ -20,3 +20,4 @@ This repository contains all the assignments for the Wipro RPS Training program,
 | 10     | Capstone Project                                           | N/A                       |
 | **TOTAL** | **45.3**                                                |                           |
 
+LINK FOR TABLE OF CONTENTS : https://docs.google.com/spreadsheets/d/1TM0UduzJmeza1x2IVMFfDaLYaG02vSrR/edit?usp=sharing&ouid=117318118689410298330&rtpof=true&sd=true
