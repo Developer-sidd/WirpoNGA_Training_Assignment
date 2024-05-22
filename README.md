@@ -6,17 +6,17 @@ This repository contains all the assignments for the Wipro RPS Training program,
 
 ## Training Modules and Duration
 
-| Sl.No. | Module Name                                               | Duration (Days) |
-|--------|------------------------------------------------------------|-----------------|
-| 1      | Software Development Life Cycle and Agile Principles      | 2.0             |
-| 2      | Linux Operating System and Source Code Management with Git | 2.0             |
-| 3      | RDBMS and SQL                                              | 3.0             |
-| 4      | Web and J2EE                                               | 8.5             |
-| 5      | Python Programming                                         | 10.0            |
-| 6      | Web and Python                                             | 6.0             |
-| 7      | Container Virtualization with Docker                       | 1.0             |
-| 8      | Container Orchestration with Kubernetes                    | 2.8             |
-| 9      | Openshift                                                  | 5.0             |
-| 10     | Capstone Project                                           | 5.0             |
-| **TOTAL** | **45.3**                                                 |                 |
+| Sl.No. | Module Name                                               |   Total Assignments) |
+|--------|------------------------------------------------------------|---------------------------|
+| 1      | Software Development Life Cycle and Agile Principles       | 4 + 2                     |
+| 2      | Linux Operating System and Source Code Management with Git | 0 + 3                     |
+| 3      | RDBMS and SQL                                              |  7 + 6                    |
+| 4      | Web and J2EE                                               | 2 Projects 2 Task/day     |
+| 5      | Python Programming                                         | 1 Assignment 1 Task/day   |
+| 6      | Web and Python                                             | 6.0  2 Project 8 Task     |
+| 7      | Container Virtualization with Docker                       | N/A                       |
+| 8      | Container Orchestration with Kubernetes                    | N/A                       |
+| 9      | Openshift                                                  | N/A                       |
+| 10     | Capstone Project                                           | N/A                       |
+| **TOTAL** | **45.3**                                                |                           |
 
